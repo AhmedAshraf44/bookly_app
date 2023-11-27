@@ -8,18 +8,16 @@ class FeatureListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 10),
-      child: SizedBox(
-        child: AspectRatio(
-          aspectRatio: 2.7/4,
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              image: DecorationImage(
-                image: AssetImage(
-                  AssetsData.book1,
-                ),
-                fit: BoxFit.fill,
+      child: AspectRatio(
+        aspectRatio: 2.7/4,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            image: DecorationImage(
+              image: AssetImage(
+                AssetsData.book1,
               ),
+              fit: BoxFit.fill,
             ),
           ),
         ),
