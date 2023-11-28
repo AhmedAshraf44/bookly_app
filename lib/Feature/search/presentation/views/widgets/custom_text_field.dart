@@ -6,29 +6,26 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  TextField(
+    return TextField(
       decoration: InputDecoration(
-        enabledBorder: buildOutlineInputBorder(),
-        focusedBorder:  buildOutlineInputBorder(),
-        suffixIcon:const  Opacity(
-          opacity: .8,
-          child: Icon(
-                FontAwesomeIcons.magnifyingGlass,
+          enabledBorder: buildOutlineInputBorder(),
+          focusedBorder: buildOutlineInputBorder(),
+          suffixIcon: const Opacity(
+            opacity: .8,
+            child: Icon(
+              FontAwesomeIcons.magnifyingGlass,
               size: 22,
               color: Colors.white,
-              ),
-        ),
-            hintText: 'Search'
-      ),
+            ),
+          ),
+          hintText: 'Search'),
     );
   }
 
   OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
-        borderSide:const BorderSide(
-          color: Colors.white
-        ),
-        borderRadius: BorderRadius.circular(12),
-      );
+      borderSide: const BorderSide(color: Colors.white),
+      borderRadius: BorderRadius.circular(12),
+    );
   }
 }

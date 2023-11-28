@@ -7,8 +7,8 @@ class BookAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 8),
-      child:  Row(
+      padding: EdgeInsets.symmetric(horizontal: 8),
+      child: Row(
         children: [
           Expanded(
               child: CustomButton(
@@ -19,7 +19,6 @@ class BookAction extends StatelessWidget {
               bottomLeft: Radius.circular(16),
             ),
             textColor: Colors.black,
-           
           )),
           Expanded(
             child: CustomButton(
@@ -30,7 +29,7 @@ class BookAction extends StatelessWidget {
                 bottomRight: Radius.circular(16),
               ),
               textColor: Colors.white,
-               fontSize: 16,
+              fontSize: 16,
             ),
           ),
         ],

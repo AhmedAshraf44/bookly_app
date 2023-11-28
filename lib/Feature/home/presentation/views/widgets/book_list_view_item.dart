@@ -33,7 +33,7 @@ class BookListViewItem extends StatelessWidget {
                 ),
               ),
             ),
-           const SizedBox(
+            const SizedBox(
               width: 30,
             ),
             Expanded(
@@ -45,7 +45,8 @@ class BookListViewItem extends StatelessWidget {
                     child: Text(
                       "Harry Potter and the Goblet of Fire",
                       maxLines: 2,
-                      style: Styles.textStyle20.copyWith(fontFamily: kaGTSectraFine),
+                      style: Styles.textStyle20
+                          .copyWith(fontFamily: kaGTSectraFine),
                     ),
                   ),
                   const SizedBox(
@@ -53,7 +54,8 @@ class BookListViewItem extends StatelessWidget {
                   ),
                   Text(
                     "J.K. Rowling",
-                    style: Styles.textStyle14.copyWith(color:const Color(0xffADACB2)),
+                    style: Styles.textStyle14
+                        .copyWith(color: const Color(0xffADACB2)),
                   ),
                   const SizedBox(
                     height: 3,
@@ -62,10 +64,11 @@ class BookListViewItem extends StatelessWidget {
                     children: [
                       Text(
                         "19.99 \$",
-                        style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
+                        style: Styles.textStyle20
+                            .copyWith(fontWeight: FontWeight.bold),
                       ),
-                     const Spacer(),
-                     const BookRating(),
+                      const Spacer(),
+                      const BookRating(),
                     ],
                   ),
                 ],

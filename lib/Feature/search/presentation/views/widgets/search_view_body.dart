@@ -30,5 +30,3 @@ class SearchViewBody extends StatelessWidget {
     );
   }
 }
-
-
