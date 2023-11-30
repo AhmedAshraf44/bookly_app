@@ -5,48 +5,44 @@ import 'package:bookly_app/core/utils/api_service.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-class HomeRepoImpl implements HomeRepo 
-{
-
- final ApiService apiService;
+class HomeRepoImpl implements HomeRepo {
+  final ApiService apiService;
 
   HomeRepoImpl(this.apiService);
   @override
-  Future<Either<Failure, List<BookModels>>> fetchNewestBooks() async{
-  try {
-  var data =  await apiService.get(endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:programming');
-  List<BookModels> book = [];  
-  for (var item in data['items']) {
-    book.add(item);
-  }
-  return right(book);
-} catch (e) {
-  if (e is DioException)
-  {
-  return left(ServerFailure.formDioError(e));
-  }
-  return left(ServerFailure(e.toString()));
-}
-
+  Future<Either<Failure, List<BookModels>>> fetchNewestBooks() async {
+    try {
+      var data = await apiService.get(
+          endPoint:
+              'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:programming');
+      List<BookModels> book = [];
+      for (var item in data['items']) {
+        book.add(item);
+      }
+      return right(book);
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.formDioError(e));
+      }
+      return left(ServerFailure(e.toString()));
+    }
   }
 
   @override
   Future<Either<Failure, List<BookModels>>> fetchFeaturesBooks() async {
     try {
-  var data =  await apiService.get(endPoint: 'volumes?Filtering=free-ebooks&q=subject:programming');
-  List<BookModels> book = [];  
-  for (var item in data['items']) {
-    book.add(item);
+      var data = await apiService.get(
+          endPoint: 'volumes?Filtering=free-ebooks&q=subject:programming');
+      List<BookModels> book = [];
+      for (var item in data['items']) {
+        book.add(item);
+      }
+      return right(book);
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.formDioError(e));
+      }
+      return left(ServerFailure(e.toString()));
+    }
   }
-  return right(book);
-} catch (e) {
-  if (e is DioException)
-  {
-  return left(ServerFailure.formDioError(e));
-  }
-  return left(ServerFailure(e.toString()));
-}
-  }
-
-
 }
