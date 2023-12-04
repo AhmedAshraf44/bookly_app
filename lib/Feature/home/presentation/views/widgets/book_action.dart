@@ -30,7 +30,7 @@ class BookAction extends StatelessWidget {
                     url: bookModels.volumeInfo.previewLink);
               },
               backgroundColor: const Color(0xffEF8262),
-              text: 'Preview',
+              text: getText(bookModels),
               borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(16),
                 bottomRight: Radius.circular(16),
@@ -43,4 +43,13 @@ class BookAction extends StatelessWidget {
       ),
     );
   }
+
+
 }
+ String getText(BookModels bookModels) {
+    if (bookModels.volumeInfo.previewLink != null) {
+      return 'Preview';
+    } else {
+      return 'Not Avaliable';
+    }
+  }
