@@ -15,13 +15,13 @@ class BookListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kBookDetailsView);
+        GoRouter.of(context).push(AppRouter.kBookDetailsView,extra: bookModels);
       },
       child: SizedBox(
         height: 125,
         child: Row(
           children: [
-            CustomBookImage(imageUrl: bookModels.volumeInfo.imageLinks.thumbnail),
+            CustomBookImage(imageUrl: bookModels.volumeInfo.imageLinks!.thumbnail),
             const SizedBox(
               width: 30,
             ),
@@ -36,6 +36,7 @@ class BookListViewItem extends StatelessWidget {
                       maxLines: 2,
                       style: Styles.textStyle20
                           .copyWith(fontFamily: kaGTSectraFine),
+                          
                     ),
                   ),
                   const SizedBox(
@@ -45,6 +46,7 @@ class BookListViewItem extends StatelessWidget {
                     bookModels.volumeInfo.authors![0],
                     style: Styles.textStyle14
                         .copyWith(color: const Color(0xffADACB2)),
+                       
                   ),
                   const SizedBox(
                     height: 3,
