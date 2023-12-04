@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key});
+   CustomTextField({super.key});
 
+  String? bookName;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onChanged: (value) {
+        bookName = value ;
+      },
       decoration: InputDecoration(
           enabledBorder: buildOutlineInputBorder(),
           focusedBorder: buildOutlineInputBorder(),
