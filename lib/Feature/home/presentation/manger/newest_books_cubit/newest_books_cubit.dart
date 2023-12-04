@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:bookly_app/Feature/home/data/models/book_models/book_models.dart';
+import 'package:bookly_app/core/models/book_models/book_models.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../../data/repos/home_repo.dart';

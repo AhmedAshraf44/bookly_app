@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 
-import '../../../data/models/book_models/book_models.dart';
+import '../../../../../core/models/book_models/book_models.dart';
 import '../../../data/repos/home_repo.dart';
 
 part 'similar_book_state.dart';
